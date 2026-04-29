@@ -7,8 +7,11 @@ class Solution {
             N*=-1;
             x= 1/x;
         }
-        boolean status = true;
-        return x*calc(x,N-1);
+        double res = calc(x,N/2);
+        if(N % 2 == 0)
+            return res*res;
+        else
+            return res*res*x;
     }
     public static double calc(double x, long n){
         return Math.pow(x,n);
