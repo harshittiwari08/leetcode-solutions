@@ -6,15 +6,9 @@ class Solution {
         int sum = 0;
         for(int num : nums){
             sum += num;
-            if(map.containsKey(sum-k)){
+            if(map.containsKey(sum-k))
                 count += map.get(sum-k);
-            }
-            // freq--
-            if(map.containsKey(sum)){
-                map.put(sum,map.get(sum)+1);
-            }
-            else map.put(sum,1);
-            
+            map.put(sum, map.getOrDefault(sum,0)+1);
         }
         return count;
     }
