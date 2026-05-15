@@ -1,6 +1,6 @@
 class Solution {
     public long minArraySum(int[] nums) {
-        Arrays.sort(nums);
+        
         int max = nums[0];
         long sum = 0;
         for(int i = 0; i < nums.length; i++){
