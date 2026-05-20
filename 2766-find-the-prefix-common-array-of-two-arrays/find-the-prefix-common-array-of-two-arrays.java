@@ -1,4 +1,3 @@
-import java.util.*;
 class Solution {
     public int[] findThePrefixCommonArray(int[] A, int[] B) {
         HashMap<Integer,Integer> set = new HashMap<>();
@@ -8,18 +7,13 @@ class Solution {
             if(set.containsKey(A[i]))
                 set.put(A[i],set.get(A[i])+1);
             else
-                set.put(A[i],1);
-            // if(A[i] == B[i])
-            //     ans[i] = ans[i-1]+1;
-            
-                for(int j =0; j<=i; j++){
-                    if(set.containsKey(B[j])){
-                        // set.put(A[i],set.get(A[i])+1);
-                        count++;
-                    }
-                    ans[i] = count;
+                set.put(A[i],1);          
+            for(int j =0; j<=i; j++){
+                if(set.containsKey(B[j])){
+                    count++;
                 }
-            
+                ans[i] = count;
+            }            
             count = 0;
         }
         return ans;
