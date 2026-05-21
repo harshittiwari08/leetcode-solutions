@@ -5,6 +5,8 @@ class Solution {
         int res = 0;
         for(int num: arr1){
             while(num != 0){
+                if(set.contains(num))
+                    break;
                 set.add(num);
                 num /= 10;
             }
@@ -13,6 +15,7 @@ class Solution {
             while(num != 0){
                 if(set.contains(num)){
                     ans = Math.max(ans, digits(num));
+                    break;
                 }
                 num /= 10;
             }
