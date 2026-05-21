@@ -4,14 +4,15 @@ class Solution {
         int[] ans = new int[A.length];
         int count = 0;
         for(int i=0; i<A.length; i++){
-            set.put(A[i],1);          
-            for(int j =0; j<=i; j++){
-                if(set.containsKey(B[j])){
-                    count++;
-                }
-                ans[i] = count;
-            }            
-            count = 0;
+            if(set.containsKey(A[i]) == false)
+                set.put(A[i],1);
+            else
+                count++;
+            if(set.containsKey(B[i]) == false)
+                set.put(B[i],1);
+            else
+                count++;
+            ans[i] = count;
         }
         return ans;
     }
