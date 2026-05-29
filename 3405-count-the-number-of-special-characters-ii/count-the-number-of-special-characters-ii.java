@@ -5,16 +5,15 @@ class Solution {
         int count = 0;
         for(int i=0; i< word.length(); i++){
             char ch = word.charAt(i);
-            if(Character.isLowerCase(ch)){
+            if(Character.isLowerCase(ch))
                 lower.put(ch, i);
-            }
-            if(Character.isUpperCase(ch)){
+
+            else
                 upper.putIfAbsent(Character.toLowerCase(ch), i);
-            }
         }
         for(char ch : lower.keySet()){
             if(upper.containsKey(ch) && lower.get(ch) < upper.get(ch))
-                count+=1;
+                count++;
         }
         return count;
     }
