@@ -3,11 +3,9 @@
  * @return {Function}
  */
 var compose = function(functions) {
-    
+    const fn = (acc, f) => f(acc)
     return function(x) {
-        for(let i = functions.length-1; i >= 0; i--)
-            x = functions[i](x);
-        return x;
+        return functions.reduceRight(fn, x)
     }
 };
 
