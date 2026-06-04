@@ -1,1 +1,1 @@
-<h2>earliest-finish-time-for-land-and-water-rides-i Notes</h2><hr>[ Time taken: 4hrs 44m 2s ]
+<h2>earliest-finish-time-for-land-and-water-rides-i Notes</h2><hr>[ Time taken: 8hrs 47m 53s ]
