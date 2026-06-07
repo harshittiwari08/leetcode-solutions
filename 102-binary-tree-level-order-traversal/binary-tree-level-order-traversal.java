@@ -24,13 +24,12 @@ class Solution {
             List<Integer> l = new ArrayList<>();
             int size = tree.size();
             for(int i = 0; i< size; i++){
-                TreeNode node = tree.poll();
+                TreeNode node = tree.remove();
                 l.add(node.val);
-                if (node.left != null)
-                    tree.offer(node.left);
-
-                if (node.right != null)
-                    tree.offer(node.right);
+                if(node.left != null)
+                    tree.add(node.left);
+                if(node.right != null)
+                    tree.add(node.right);
             }
             ans.add(l);
         }
