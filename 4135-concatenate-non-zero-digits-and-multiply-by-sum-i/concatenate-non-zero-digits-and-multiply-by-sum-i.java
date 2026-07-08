@@ -5,8 +5,8 @@ class Solution {
         long sum = 0;
         int l = 0;
         for(int i =num.length()-1; i>=0; i--){
-            if(Character.getNumericValue(num.charAt(i)) != 0){
-                x += Character.getNumericValue(num.charAt(i)) * Math.pow(10,l);
+            if((num.charAt(i))-'0' != 0){
+                x += ((num.charAt(i))-'0') * Math.pow(10,l);
                 l++;
             }
         }
