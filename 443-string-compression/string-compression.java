@@ -10,8 +10,6 @@ class Solution {
                 sb.append(chars[i-1]);
                 if(count >1)
                     sb.append(count);
-                
-                
                 count = 1;
             }
             i++;
