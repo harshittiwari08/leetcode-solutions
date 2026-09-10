@@ -7,8 +7,6 @@ class Solution {
                 first++;
             second++;
         }
-        if(first == s.length())
-            return true;
-        return false;
+        return (first == s.length());
     }
 }
