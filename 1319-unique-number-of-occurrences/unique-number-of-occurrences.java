@@ -1,15 +1,14 @@
 class Solution {
     public boolean uniqueOccurrences(int[] arr) {
-        HashMap<Integer, Integer> map = new HashMap<>();
-        for(int num : arr){
-            if(!map.containsKey(num))
-                map.put(num,1);
-            else
-                map.replace(num,map.get(num)+1);
+        int[] num = new int[2001];
+        for(int i = 0; i<arr.length; i++)
+            num[arr[i]+1000] += 1; 
+        
+        Arrays.sort(num);
+        for(int i = 1; i<num.length; i++){
+            if(num[i] != 0 && num[i-1]==num[i])
+                return false;
         }
-        HashSet<Integer> set = new HashSet<>(map.values());
-        if(set.size() == map.size())
-            return true;
-        return false;
+        return true;
     }
 }
