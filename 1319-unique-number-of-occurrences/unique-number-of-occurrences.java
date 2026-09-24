@@ -1,16 +1,12 @@
 class Solution {
     public boolean uniqueOccurrences(int[] arr) {
-        int[] num = new int[2001];
-        for(int i = 0; i<arr.length; i++)
-            num[arr[i]+1000] += 1; 
-        
-        Arrays.sort(num);
-        for(int i = 1; i<num.length; i++){
-            while(num[i] == 0)
-                i++;
-            if(num[i] != 0 && num[i-1]==num[i])
-                return false;
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for(int num : arr){
+            map.put(num, map.getOrDefault(num, 0)+1);
         }
-        return true;
+        HashSet<Integer> set = new HashSet<>(map.values());
+        if(set.size() == map.size())
+            return true;
+        return false;
     }
 }
