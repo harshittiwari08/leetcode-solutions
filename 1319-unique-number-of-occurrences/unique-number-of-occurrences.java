@@ -6,6 +6,8 @@ class Solution {
         
         Arrays.sort(num);
         for(int i = 1; i<num.length; i++){
+            while(num[i] == 0)
+                i++;
             if(num[i] != 0 && num[i-1]==num[i])
                 return false;
         }
