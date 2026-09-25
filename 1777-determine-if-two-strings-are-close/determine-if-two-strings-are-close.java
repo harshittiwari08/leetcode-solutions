@@ -7,10 +7,8 @@ class Solution {
         for(int i = 0; i<word1.length(); i++){
             char ch1 = word1.charAt(i);
             char ch2 = word2.charAt(i);
-            int idx1 = ch1 - 'a';
-            int idx2 = ch2 - 'a';
-            f1[idx1]++;
-            f2[idx2]++;
+            f1[ch1 - 'a']++;
+            f2[ch2 - 'a']++;
         }
         for(int i = 0; i<f1.length; i++){
             if(f1[i] != 0 && f2[i] != 0)
