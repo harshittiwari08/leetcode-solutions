@@ -1,0 +1,1 @@
+<h2>equal-row-and-column-pairs Notes</h2><hr>[ Time taken: 1d 19hrs 25m 53s ]
